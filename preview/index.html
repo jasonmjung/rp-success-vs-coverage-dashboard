@@ -163,11 +163,11 @@ function renderDashboard() {
     const routeFill  = qC(rv,...TH_VOL);
     const routeTrack = qT(rv,...TH_VOL);
     const routeText  = qC(rv,...TH_VOL);
-    return `<div style="display:flex;align-items:center;padding:18px 22px;${bt}">
+    return `<div style="display:flex;align-items:center;padding:28px 22px;${bt}">
       <div style="flex:0 0 120px;font-size:15px;font-weight:600;color:#1f1a14;">${row.label}</div>
       <div style="flex:1;display:flex;align-items:center;gap:6px;padding-right:14px;">
         ${hasPct(row.successRate)
-          ? `<div style="flex:1;display:flex;height:12px;border-radius:6px;overflow:hidden;background:${srTrack};">
+          ? `<div style="flex:1;display:flex;height:12px;border-radius:9999px;overflow:hidden;background:${srTrack};">
                <div style="width:${sv}%;background:${srColor};border-radius:4px;flex-shrink:0;"></div>
              </div>
              <span style="font-size:20px;font-weight:600;color:${srColor};min-width:70px;text-align:right;">${row.successRate}</span>`
@@ -179,7 +179,7 @@ function renderDashboard() {
           : `<span style="font-size:20px;font-weight:600;color:#c9b89a;">-</span>`}
       </div>
       <div style="flex:1;display:flex;align-items:center;gap:6px;border-left:1px solid #c9b89a;padding-left:14px;">
-        <div style="flex:1;display:flex;height:12px;border-radius:6px;overflow:hidden;background:${routeTrack};">
+        <div style="flex:1;display:flex;height:12px;border-radius:9999px;overflow:hidden;background:${routeTrack};">
           <div style="width:${rv}%;background:${routeFill};border-radius:4px;flex-shrink:0;"></div>
         </div>
         <span style="font-size:20px;font-weight:600;color:${routeText};min-width:70px;text-align:right;">${row.routePercent}</span>
@@ -194,20 +194,13 @@ function renderDashboard() {
     return `<div style="background:#fff;border-radius:6px;border:1.5px solid rgba(61,88,81,0.24);padding:24px 14px;">
       <div style="text-align:center;margin-bottom:10px;font-size:13px;font-weight:600;color:#1f1a14;text-transform:uppercase;white-space:nowrap;">${m.label}</div>
       <div style="text-align:center;font-size:45px;font-weight:700;color:${color};margin-bottom:12px;">${v.toFixed(1)}%</div>
-      <div style="height:13px;border-radius:6px;overflow:hidden;background:${track};">
+      <div style="height:13px;border-radius:9999px;overflow:hidden;background:${track};">
         <div style="width:${v}%;height:100%;background:${color};border-radius:5px;"></div>
       </div>
     </div>`;
   }).join("");
 
   document.getElementById("dashboard-content").innerHTML = `
-    <div style="display:flex;flex-direction:column;align-items:center;gap:28px;margin-bottom:40px;width:100%;">
-      <div style="text-align:center;line-height:0.9;">
-        <div style="font-size:60px;font-weight:500;color:#3d584e;letter-spacing:-2px;font-family:'Montserrat',Helvetica,Arial,sans-serif;">SUCCESS RATE</div>
-        <div style="font-size:60px;font-weight:900;color:#3d584e;letter-spacing:-2px;font-family:'Montserrat',Helvetica,Arial,sans-serif;">VS. COVERAGE</div>
-      </div>
-      <div style="height:2px;width:52px;background:#b9aed3;border-radius:2px;"></div>
-    </div>
     <div style="width:100%;border:1.5px solid rgba(61,88,81,0.24);border-radius:6px;overflow:hidden;margin-bottom:32px;">
       <div style="display:flex;align-items:center;background:#3d5851;padding:0 22px;min-height:45px;">
         <div style="flex:0 0 120px;font-size:12px;font-weight:700;letter-spacing:1.8px;color:#faf6ec;">COVERAGE</div>
@@ -431,11 +424,11 @@ function generateHtml() {
     const routeFill  = qC(rv,...TH_VOL);
     const routeTrack = qT(rv,...TH_VOL);
     const routeText  = qC(rv,...TH_VOL);
-    return `<div style="display:flex;align-items:center;padding:18px 22px;${bt}">
+    return `<div style="display:flex;align-items:center;padding:28px 22px;${bt}">
       <div style="flex:0 0 120px;font-family:Helvetica,Arial,sans-serif;font-size:15px;font-weight:600;color:#1f1a14;">${row.label}</div>
       <div style="flex:1;display:flex;align-items:center;gap:6px;padding-right:14px;">
         ${hasPct(row.successRate)
-          ? `<div style="flex:1;display:flex;height:12px;border-radius:6px;overflow:hidden;background:${srTrack};"><div style="width:${sv}%;background:${srColor};border-radius:4px;flex-shrink:0;"></div></div>
+          ? `<div style="flex:1;display:flex;height:12px;border-radius:9999px;overflow:hidden;background:${srTrack};"><div style="width:${sv}%;background:${srColor};border-radius:4px;flex-shrink:0;"></div></div>
              <span style="font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:600;color:${srColor};min-width:70px;text-align:right;">${row.successRate}</span>`
           : `<span style="font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:600;color:#c9b89a;">-</span>`}
       </div>
@@ -445,7 +438,7 @@ function generateHtml() {
           : `<span style="font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:600;color:#c9b89a;">-</span>`}
       </div>
       <div style="flex:1;display:flex;align-items:center;gap:6px;border-left:1px solid #c9b89a;padding-left:14px;">
-        <div style="flex:1;display:flex;height:12px;border-radius:6px;overflow:hidden;background:${routeTrack};"><div style="width:${rv}%;background:${routeFill};border-radius:4px;flex-shrink:0;"></div></div>
+        <div style="flex:1;display:flex;height:12px;border-radius:9999px;overflow:hidden;background:${routeTrack};"><div style="width:${rv}%;background:${routeFill};border-radius:4px;flex-shrink:0;"></div></div>
         <span style="font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:600;color:${routeText};min-width:70px;text-align:right;">${row.routePercent}</span>
       </div>
     </div>`;
@@ -458,7 +451,7 @@ function generateHtml() {
     return `<div style="background:#fff;border-radius:6px;border:1.5px solid rgba(61,88,81,0.24);padding:24px 14px;">
       <div style="text-align:center;margin-bottom:10px;font-family:Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;color:#1f1a14;text-transform:uppercase;white-space:nowrap;">${m.label}</div>
       <div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:45px;font-weight:700;color:${color};margin-bottom:12px;">${v.toFixed(1)}%</div>
-      <div style="height:13px;border-radius:6px;overflow:hidden;background:${track};">
+      <div style="height:13px;border-radius:9999px;overflow:hidden;background:${track};">
         <div style="width:${v}%;height:100%;background:${color};border-radius:5px;"></div>
       </div>
     </div>`;
@@ -467,13 +460,6 @@ function generateHtml() {
   return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Coverage Dashboard — ${playerName}</title></head>
 <body style="margin:0;background:#faf6ec;font-family:Helvetica,Arial,sans-serif;">
 <div style="background:#faf6ec;max-width:960px;margin:0 auto;padding:40px 48px 32px;box-sizing:border-box;">
-  <div style="display:flex;flex-direction:column;align-items:center;gap:28px;margin-bottom:40px;">
-    <div style="text-align:center;line-height:0.9;">
-      <div style="font-size:60px;font-weight:500;color:#3d584e;letter-spacing:-2px;font-family:'Montserrat',Helvetica,Arial,sans-serif;">SUCCESS RATE</div>
-      <div style="font-size:60px;font-weight:900;color:#3d584e;letter-spacing:-2px;font-family:'Montserrat',Helvetica,Arial,sans-serif;">VS. COVERAGE</div>
-    </div>
-    <div style="height:2px;width:52px;background:#b9aed3;border-radius:2px;"></div>
-  </div>
   <div style="border:1.5px solid rgba(61,88,81,0.24);border-radius:6px;overflow:hidden;margin-bottom:32px;">
     <div style="display:flex;align-items:center;background:#3d5851;padding:0 22px;min-height:45px;">
       <div style="flex:0 0 120px;font-family:Helvetica,Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:1.8px;color:#faf6ec;">COVERAGE</div>
